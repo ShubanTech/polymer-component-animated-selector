@@ -1,0 +1,36 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<polymer-element name="custom-img-li"  attributes="type">
+<template >
+<link rel="stylesheet" href="multi.css">
+<ul  id="{{type}}-type-id" class="{{type}}-type ">
+  <template repeat="{{uli as lii}}">
+    <li style="background:#e5e5e5 url(images/{{lii.img}}) no-repeat center 6px;" id=='{{lii.di}}' on-Click="{{selects}}"  text= "{{lii.name}}">{{lii.name}}<span></span></li>
+  </template>
+</ul>
+</template>
+<script>
+  var selectedItems=[];
+    (function () { 
+      Polymer({
+		  mypop:function(value,array){var index = array.indexOf(value); 
+				if (index > -1) {
+   					array.splice(index, 1);
+							}
+					return array;},
+		  selects:function(event){
+			  var t = event.currentTarget.getAttribute('text');
+			  var st=event.currentTarget.style;
+			 if(event.currentTarget.getAttribute('class')=='selected'){
+				  selectedItems=this.mypop(t,selectedItems);
+				event.currentTarget.removeAttribute('class','selected');
+			  }else{ 
+			   selectedItems.push(t);
+			  	event.currentTarget.setAttribute('class','selected');
+			  };
+			    var result=selectedItems.join();
+			  document.getElementById('selectvalues').innerHTML=result;
+			  }
+		  });
+    })();
+  </script>
+</polymer-element>

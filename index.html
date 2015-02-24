@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Demo Page</title>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="custom-img-li.html">
+</head>
+    <div class="center">
+      <h6>fuel Type</h6>
+    </div>
+    <custom-img-li type="fuel" ></custom-img-li>
+    <div id="selectvalues"></div>
+<script>
+	document.querySelector('custom-img-li').uli= [
+					 		{di:'petrol' , name:'Petrol',img:'petrl.png',},
+							{di:'diesel' , name:'Desial',img:'des.png'},
+							{di:'cng' , name:'CNG',img:'cng.png'},
+							{di:'lpg' , name:'LPG',img:'lpg.png'},
+					 
+					];
+</script>
+</body></html>

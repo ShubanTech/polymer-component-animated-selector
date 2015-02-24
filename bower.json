@@ -1,0 +1,25 @@
+{
+  "name": "custom-img-ul",
+  "version": "1.0.0",
+  "description": "image ul",
+  "main": "index.html",
+  "keywords": [
+    "image",
+    "multi select",
+    "selector",
+    "ul"
+  ],
+  "authors": [
+    "shubantech"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "~0.5.5"
+  }
+}
